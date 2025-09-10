@@ -1,3 +1,6 @@
+// this code basically iterate through given array and will print the elements along the number of times they have appeared ..for the elements 
+//which have appeared more than once
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Dictionary;
