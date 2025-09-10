@@ -1,5 +1,7 @@
 
 import java.util.*;
+// this code basically iterate through given array and will print the elements along the number of times they have appeared ..for the elements 
+//which have appeared more than once
 
 public class customarraylist {
     private int[] data;
