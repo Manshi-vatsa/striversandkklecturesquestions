@@ -1,26 +1,25 @@
-import java.util.*;
+import java.util.HashSet;
 
 public class q2hashmap {
-  static class  union{
-    public void union(int array1[],int array2[]){
-        HashSet<Integer> set= new HashSet<>();
+    static class union {
+      public HashSet find_union(int[] array1,int[] array2){
+        HashSet union=new HashSet<>();
         for (int i : array1) {
-            set.add(i);
+            union.add(i);
         }
-        for (Integer integer : array2) {
-            set.add(integer);
+        for (int i:array2){
+            union.add(i);
         }
-        System.out.println(set.size());
-        for (Integer integer : set) {
-            System.out.print(integer + " ");
-        }
+        return union;
+      }
+        
     }
-
-  }
-  public static void main(String[] args) {
-    int array1[]={1,2,2,3,4,5,6};
-    int array2[]={1,2,5,6,7,3};
-    union obj1= new union();
-    obj1.union(array1, array2);
-  }
+    public static void main(String[] args) {
+        int[] array1={1,2,3,4,5,6};
+        int[] array2={1,5,7,8,4};
+        union obj1=new union();
+        System.out.println( obj1.find_union(array1, array2));
+       
+       
+    }
 }

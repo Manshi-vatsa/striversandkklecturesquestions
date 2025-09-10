@@ -1,31 +1,23 @@
-import java.util.*;
+import java.util.HashSet;
+
+
 
 public class q3hashmap {
-    static class intersection{
-        public void intersection(int array1[],int array2[]){
-            HashSet<Integer> set=new HashSet<>();
-            HashSet<Integer> result=new HashSet<>();
-            for (Integer integer : array1) {
-                set.add(integer);
-
-            }
-            for (Integer integer : array2) {
-                if (set.contains(integer)) {
-                    result.add(integer);
+    public static HashSet find_intersection(int[] array1,int[] array2){
+        HashSet<Integer> newset=new HashSet<>();
+        for (Integer nums:array1) {
+              for (int i = 0; i < array2.length; i++) {
+                if (array2[i]==nums) {
+                    newset.add(nums);
                 }
-                
-
-            }
-            for (Integer integer : result) {
-                System.out.print(integer + " ");
-            }
+              }            
         }
+        return newset;
     }
     public static void main(String[] args) {
-        int[] array1={7,3,9};
-        int[] array2={6,3,9,2,9,4};
-        intersection obj1=new intersection();
-        obj1.intersection(array1, array2);
+        int array1[]={1,2,3,4,1,5,6};
+    int array2[]={4,7};
+    System.out.println(find_intersection(array1,array2));
     }
     
 }
