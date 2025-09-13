@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //in this question we have the advanatage that we can make reverse map because accordign to the guven condition all the keys and values are unique but i have not created it here
-
+//this question basicassy find the route from starting to end
 public class q4hashmap {
     static class itinerary{
        public static  String find_starting(HashMap<String, String> map){
